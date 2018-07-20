@@ -30,7 +30,8 @@ ALLOWED_HOSTS = ['localhost','testserver']
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+   # Removed to stop admin css being loaded by collectstatic
+   # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -120,3 +121,5 @@ DEFAULT_CHARSET = 'utf-8'
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
